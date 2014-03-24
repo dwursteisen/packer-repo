@@ -26,8 +26,6 @@ sed -i -e 's/-XX:MaxPermSize=256m/-XX:MaxPermSize=512m/g' /usr/local/eclipse/ecl
 sed -i -e 's/-Xms40m/-Xms1024m/g' /usr/local/eclipse/eclipse.ini
 sed -i -e 's/-Xmx512m/-Xmx2550m/g' /usr/local/eclipse/eclipse.ini
 
-echo "Create workspace"
-unzip /tmp/files/workspace.zip
 
 echo "Pause for console output"
 sleep 2
