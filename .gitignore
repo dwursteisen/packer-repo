@@ -8,3 +8,14 @@ build.xml
 m2e-wtp
 *.box
 .vagrant
+
+# Created by http://www.gitignore.io
+
+### Packer ###
+# Cache objects
+packer_cache/
+
+# For built boxes
+*.box
+
+output-virtualbox-iso
