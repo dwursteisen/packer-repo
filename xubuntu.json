@@ -1,0 +1,82 @@
+{
+  "builders": [
+    {
+      "boot_command": [
+        "<esc><esc><esc><enter><wait>",
+		"/casper/vmlinuz append noprompt url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg <wait>",
+		"hostname={{ .Name }} <wait>",
+		"boot=casper initrd=/casper/initrd.lz splash persistent locale=fr -- <enter>"
+      ],
+      "boot_wait": "4s",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "guest_os_type": "Ubuntu_64",
+      "http_directory": "http",
+      "iso_checksum": "99fddea7d86b29059c854968e3be38c3",
+      "iso_checksum_type": "md5",
+      "iso_url": "http://se.archive.ubuntu.com/mirror/cdimage.ubuntu.com/xubuntu/releases/13.10/release/xubuntu-13.10-desktop-i386.iso",
+      "shutdown_command": "echo 'shutdown -P now' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_username": "vagrant",
+	  "http_port_min": "8082",
+      "ssh_wait_timeout": "10000s",
+      "type": "virtualbox-iso",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--ioapic",
+          "on"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--rtcuseutc",
+          "on"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--accelerate3d",
+          "on"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--clipboard",
+          "bidirectional"
+        ]
+      ],
+      "virtualbox_version_file": ".vbox_version"
+    }
+  ],
+  "post-processors": [
+    {
+      "output": "xubuntu.box",
+      "type": "vagrant"
+    }
+  ],
+  "provisioners": [
+    {
+      "destination": "/tmp",
+      "source": "files",
+      "type": "file"
+    },
+    {
+      "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
+      "scripts": [
+        "scripts/build_time.sh",
+        "scripts/apt.sh",
+        "scripts/vbox.sh",
+        "scripts/sudo.sh",
+        "scripts/vagrant.sh",
+        "scripts/java.sh",
+        "scripts/eclipse.sh",
+        "scripts/maven.sh",
+        "scripts/git.sh",
+        "scripts/cleanup.sh"
+      ],
+      "type": "shell"
+    }
+  ]
+}
