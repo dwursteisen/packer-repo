@@ -6,6 +6,7 @@
 		"/casper/vmlinuz noprompt url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg <wait>",
 		"hostname={{ .Name }} <wait>",
 		"automatic-ubiquity <wait>",
+		"keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=fr keyboard-configuration/variant=latin9 console-setup/ask_detect=false <wait>",
 		"boot=casper initrd=/casper/initrd.lz splash persistent locale=fr -- <enter>"
       ],
       "boot_wait": "4s",
