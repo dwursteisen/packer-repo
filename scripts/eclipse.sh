@@ -1,7 +1,7 @@
 export ECLIPSE_VERSION=java-kepler-SR2
 
 echo "Retrieve Eclispe distribution"
-wget http://download.eclipse.org/technology/epp/downloads/release/kepler/SR1/eclipse-$ECLIPSE_VERSION-linux-gtk-x86_64.tar.gz
+wget http://download.eclipse.org/technology/epp/downloads/release/kepler/SR2/eclipse-$ECLIPSE_VERSION-linux-gtk-x86_64.tar.gz
 tar -xvzf eclipse-$ECLIPSE_VERSION-linux-gtk-x86_64.tar.gz -C /usr/local
 rm eclipse-$ECLIPSE_VERSION-linux-gtk-x86_64.tar.gz
 chmod -R +r /usr/local/eclipse
