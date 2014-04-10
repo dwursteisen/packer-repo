@@ -72,6 +72,7 @@
         "scripts/apt.sh",
         "scripts/vbox.sh",
         "scripts/sudo.sh",
+		"scripts/keyboard.sh",
         "scripts/vagrant.sh",
         "scripts/java.sh",
         "scripts/eclipse.sh",
