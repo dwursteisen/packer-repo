@@ -1,4 +1,4 @@
-export ECLIPSE_VERSION=jee-kepler-SR1
+export ECLIPSE_VERSION=java-kepler-SR2
 
 echo "Retrieve Eclispe distribution"
 wget http://download.eclipse.org/technology/epp/downloads/release/kepler/SR1/eclipse-$ECLIPSE_VERSION-linux-gtk-x86_64.tar.gz
@@ -27,7 +27,7 @@ sed -i -e 's/-Xms40m/-Xms1024m/g' /usr/local/eclipse/eclipse.ini
 sed -i -e 's/-Xmx512m/-Xmx2550m/g' /usr/local/eclipse/eclipse.ini
 
 echo "Create workspace"
-unzip /tmp/files/workspace.zip
+echo "unzip /tmp/files/workspace.zip"
 
 echo "Pause for console output"
 sleep 2

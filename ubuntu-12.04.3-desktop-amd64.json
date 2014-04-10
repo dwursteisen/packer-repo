@@ -75,8 +75,8 @@
         "scripts/vagrant.sh",
         "scripts/java.sh",
         "scripts/eclipse.sh",
-        "scripts/maven.sh",
-        "scripts/jboss.sh",
+		"scripts/intellij.sh",
+		"scripts/maven.sh",
         "scripts/git.sh",
         "scripts/cleanup.sh"
       ],
