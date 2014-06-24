@@ -78,7 +78,7 @@
         "scripts/eclipse.sh",
 		"scripts/intellij.sh",
 		"scripts/maven.sh",
-        "scripts/git.sh",
+		"scripts/chef.sh",
         "scripts/cleanup.sh"
       ],
       "type": "shell"
