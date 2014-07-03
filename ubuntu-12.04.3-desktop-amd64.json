@@ -79,6 +79,7 @@
 		"scripts/intellij.sh",
 		"scripts/maven.sh",
 		"scripts/chef.sh",
+		"scripts/docker.sh",
         "scripts/cleanup.sh"
       ],
       "type": "shell"
