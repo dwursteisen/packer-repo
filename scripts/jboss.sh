@@ -25,4 +25,4 @@ rm teiid.zip
 
 echo "Apply configuration and permissions"
 ln -s /usr/local/jboss-$JBOSS_VERSION Desktop/jboss-$JBOSS_VERSION
-chown -R vagrant /usr/local/jboss-$JBOSS_VERSION
+chown -R formation /usr/local/jboss-$JBOSS_VERSION

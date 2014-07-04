@@ -17,10 +17,10 @@
       "iso_checksum": "46e0fac240154bf59a11426a47a61363",
       "iso_checksum_type": "md5",
       "iso_url": "http://releases.ubuntu.com/precise/ubuntu-12.04.4-alternate-amd64.iso",
-      "shutdown_command": "echo 'shutdown -P now' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
-      "ssh_password": "vagrant",
+      "shutdown_command": "echo 'shutdown -P now' > shutdown.sh; echo 'formation'|sudo -S sh 'shutdown.sh'",
+      "ssh_password": "formation",
       "ssh_port": 22,
-      "ssh_username": "vagrant",
+      "ssh_username": "formation",
       "ssh_wait_timeout": "10000s",
 	  "http_port_min": "8082",
       "type": "virtualbox-iso",
@@ -66,7 +66,7 @@
       "type": "file"
     },
     {
-      "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
+      "execute_command": "echo 'formation'|sudo -S sh '{{.Path}}'",
       "scripts": [
         "scripts/build_time.sh",
         "scripts/apt.sh",

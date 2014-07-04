@@ -1,5 +1,5 @@
 echo "Apply proper ownership"
-chown -R vagrant /home/vagrant
+chown -R formation /home/formation
 
 apt-get -y autoremove
 

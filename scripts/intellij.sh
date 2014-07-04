@@ -14,8 +14,8 @@ echo export PATH=\$PATH:/usr/local/intellij > /etc/profile.d/intellij.sh
 echo setenv PATH \${PATH}:/usr/local/intellij > /etc/profile.d/intellij.csh
 
 echo "Generate Desktop launcher"
-mkdir /home/vagrant/Desktop/
-cat <<EOF >/home/vagrant/Desktop/IntelliJ.desktop
+mkdir /home/formation/Desktop/
+cat <<EOF >/home/formation/Desktop/IntelliJ.desktop
 [Desktop Entry]
 Version=1.0
 Type=Application
@@ -24,7 +24,7 @@ Exec=/usr/local/intellij/bin/idea.sh
 Icon=/usr/local/intellij/bin/idea.png
 Terminal=false
 EOF
-chmod +rwx /home/vagrant/Desktop/IntelliJ.desktop
+chmod +rwx /home/formation/Desktop/IntelliJ.desktop
 
 echo "Pause for console output"
 sleep 2

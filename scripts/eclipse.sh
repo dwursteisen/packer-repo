@@ -9,8 +9,8 @@ echo export PATH=\$PATH:/usr/local/eclipse > /etc/profile.d/eclipse.sh
 echo setenv PATH \${PATH}:/usr/local/eclipse > /etc/profile.d/eclipse.csh
 
 echo "Generate Desktop launcher"
-mkdir /home/vagrant/Desktop/
-cat <<EOF >/home/vagrant/Desktop/eclipse.desktop
+mkdir /home/formation/Desktop/
+cat <<EOF >/home/formation/Desktop/eclipse.desktop
 [Desktop Entry]
 Version=1.0
 Type=Application
@@ -19,7 +19,7 @@ Exec=/usr/local/eclipse/eclipse
 Icon=/usr/local/eclipse/icon.xpm
 Terminal=false
 EOF
-chmod +rwx /home/vagrant/Desktop/eclipse.desktop
+chmod +rwx /home/formation/Desktop/eclipse.desktop
 
 echo "Update eclipse.ini"
 sed -i -e 's/-XX:MaxPermSize=256m/-XX:MaxPermSize=512m/g' /usr/local/eclipse/eclipse.ini
